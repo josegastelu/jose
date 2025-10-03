@@ -215,16 +215,13 @@ export default function HomePage() {
           </div>
 
           <div className="glass-card rounded-xl p-8">
-            {/* Placeholder for Google Calendar iframe */}
-            <div className="aspect-video bg-background/50 rounded-lg flex items-center justify-center border-2 border-dashed border-border">
-              <div className="text-center">
-                <Calendar className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground mb-2">Intégration Google Calendar</p>
-                <p className="text-sm text-muted-foreground">
-                  L'iframe Google Calendar sera intégré ici pour permettre la réservation et le paiement direct
-                </p>
-              </div>
-            </div>
+            <iframe
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25LxAN7sJ6zgDmMHcFNqWX3y4jrn0JAjpwnsxOb4GZjMaGfrIUc6JBmKRyA7tJ9rHc5iTtJ6Nu?gv=true"
+              style={{ border: 0 }}
+              width="100%"
+              height={600}
+              frameBorder="0"
+            ></iframe>
 
             {/* Alternative booking button */}
             <div className="text-center mt-6">
