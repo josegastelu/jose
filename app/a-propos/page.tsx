@@ -10,64 +10,52 @@ const content = {
   fr: {
     hero: {
       title: "À propos de Jose Gastelu",
-      subtitle: "Psychologue clinicien avec une approche humaniste et empathique",
+      subtitle:
+        "Thérapeute clinicien membre OTSTCFQ, formé à la relation thérapeutique",
     },
+    intro:
+      "Je suis thérapeute clinicien membre OTSTCFQ. Ma formation est centrée sur la relation thérapeutique. Actuellement, j’approfondis mes connaissances à la Faculté de médecine et des sciences de la santé de l’Université de Sherbrooke, dans le cadre de la maîtrise clinique en dépendances. Mes travaux portent sur une recherche de type essai-synthèse, explorant les liens entre les dépendances et la résilience en tant que facteur de protection.",
     philosophy: {
       title: "Ma Philosophie",
-      subtitle: "Une approche centrée sur la personne",
+      subtitle: "Une approche d'abord humaniste, ancrée dans l'ici et maintenant",
       description:
-        "Je crois profondément en la capacité de chaque individu à trouver ses propres solutions et à développer son potentiel. Mon approche humaniste place la personne au centre du processus thérapeutique, dans un climat de confiance, d'empathie et d'authenticité.",
+        "Mon approche repose sur une compréhension globale de la personne et de son environnement. J'ancre ma pratique dans l'« ici et maintenant » afin de co-construire des pistes de solution dans un climat de confiance, tout en respectant le rythme de chacun. L'empathie, l'ouverture d'esprit et la bienveillance sont les valeurs qui guident ma pratique professionnelle.",
       values: [
-        {
-          title: "Empathie",
-          description: "Comprendre et ressentir ce que vous vivez sans jugement",
-        },
-        {
-          title: "Bienveillance",
-          description: "Créer un espace sécurisé pour votre épanouissement",
-        },
-        {
-          title: "Authenticité",
-          description: "Être vrai et transparent dans notre relation thérapeutique",
-        },
-        {
-          title: "Respect",
-          description: "Honorer votre rythme et vos choix personnels",
-        },
+        { title: "Empathie", description: "Être à l'écoute de votre vécu, sans jugement" },
+        { title: "Ouverture d'esprit", description: "Accueillir votre singularité et votre contexte" },
+        { title: "Bienveillance", description: "Offrir un espace sécurisant et respectueux" },
+        { title: "Respect du rythme", description: "Avancer à votre cadence, en co-construction" },
       ],
     },
     qualifications: {
-      title: "Qualifications & Formation",
+      title: "Qualifications & Parcours",
       items: [
-        "Master en Psychologie Clinique - Université de Madrid",
-        "Spécialisation en Thérapie Humaniste",
-        "Formation en Thérapie de Couple et Familiale",
-        "Certification en Thérapie en Ligne",
-        "15 ans d'expérience en pratique clinique",
-        "Membre du Collège des Psychologues",
+        "Thérapeute clinicien membre OTSTCFQ",
+        "Formation centrée sur la relation thérapeutique",
+        "Maîtrise clinique en dépendances (en cours) – FMSS, Université de Sherbrooke",
+        "Recherche (essai-synthèse) : liens entre dépendances et résilience (facteur de protection)",
+        "Pratique en collaboration : Clinique Duluth, GreenShield Santé, Santé Canada",
+        "Bureau situé sur le Plateau Mont-Royal, Montréal",
       ],
     },
     approach: {
       title: "Mon Approche Thérapeutique",
-      description: "Ma méthode s'appuie sur plusieurs approches complémentaires, adaptées à vos besoins spécifiques :",
+      description:
+        "J'intègre différentes approches selon vos besoins, toujours dans une perspective humaniste et collaborative :",
       methods: [
-        {
-          title: "Approche Humaniste",
-          description: "Centrée sur votre potentiel de croissance et d'auto-actualisation",
-        },
-        {
-          title: "Thérapie Cognitive-Comportementale",
-          description: "Pour identifier et modifier les schémas de pensée limitants",
-        },
-        {
-          title: "Thérapie Systémique",
-          description: "Pour comprendre les dynamiques relationnelles et familiales",
-        },
-        {
-          title: "Mindfulness",
-          description: "Pour développer la conscience de soi et la gestion émotionnelle",
-        },
+        { title: "Humaniste", description: "Compréhension globale et centrée sur la personne" },
+        { title: "Cognitivo-comportementale (TCC)", description: "Adapter pensées et comportements à vos objectifs" },
+        { title: "Motivationnelle", description: "Soutenir le changement à votre rythme" },
+        { title: "Systémique", description: "Prendre en compte les dynamiques relationnelles" },
       ],
+    },
+    practice: {
+      title: "Ma Pratique",
+      intro:
+        "J'offre des services de consultation thérapeutique en suivis individuels et de couple, auprès d'une clientèle de jeunes adultes et d'adultes, en présentiel ou en visioconférence à Montréal.",
+      collaborations:
+        "Présentement, ma pratique clinique se déploie en collaboration avec la Clinique Duluth, GreenShield Santé ainsi que Santé Canada.",
+      location: "Mon bureau est situé sur le Plateau Mont-Royal.",
     },
     cta: {
       title: "Prêt à commencer ?",
@@ -173,6 +161,17 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Presentation Section */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <Card className="glass-card border-0">
+            <CardContent className="p-8">
+              <p className="text-foreground leading-relaxed">{t.intro}</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Philosophy Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -215,6 +214,23 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Practice Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">{t.practice.title}</h2>
+          </div>
+
+          <Card className="glass-card border-0">
+            <CardContent className="p-8 space-y-4">
+              <p className="text-foreground leading-relaxed">{t.practice.intro}</p>
+              <p className="text-foreground leading-relaxed">{t.practice.collaborations}</p>
+              <p className="text-foreground leading-relaxed">{t.practice.location}</p>
             </CardContent>
           </Card>
         </div>
