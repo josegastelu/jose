@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { FloatingTestimonial } from "@/components/floating-testimonial"
+import { openSchedulingPopup } from "@/components/googleScheduler"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, Heart, Users, Video, Star, ArrowRight } from "lucide-react"
@@ -10,7 +11,7 @@ import { Calendar, Heart, Users, Video, Star, ArrowRight } from "lucide-react"
 const content = {
   fr: {
     hero: {
-      title: "Votre bien-être psychologique, ma priorité",
+      title: "Votre santé mentale, ma priorité",
       subtitle: "Accompagnement thérapeutique avec une approche humaniste et empathique",
       cta: "Prendre rendez-vous",
       freeCta: "Consultation gratuite 15min",
@@ -146,6 +147,7 @@ export default function HomePage() {
               variant="outline"
               size="lg"
               className="glass-card liquid-transition text-lg px-8 py-3 bg-transparent"
+              onClick={() => openSchedulingPopup()}
             >
               <Video className="w-5 h-5 mr-2" />
               {t.hero.freeCta}
@@ -283,7 +285,7 @@ export default function HomePage() {
                 : "Dé el primer paso hacia el bienestar. Reserve su consulta gratuita de 15 minutos."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 liquid-transition text-lg px-8 py-3">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 liquid-transition text-lg px-8 py-3" onClick={() => openSchedulingPopup()}>
                 <Calendar className="w-5 h-5 mr-2" />
                 {t.hero.freeCta}
               </Button>

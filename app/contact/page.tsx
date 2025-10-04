@@ -6,6 +6,7 @@ import { useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { openSchedulingPopup } from "@/components/googleScheduler"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import {
@@ -220,7 +221,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">{t.appointment.title}</h3>
                 <p className="text-muted-foreground mb-4">{t.appointment.subtitle}</p>
-                <Button className="bg-primary hover:bg-primary/90 liquid-transition">
+                <Button className="bg-primary hover:bg-primary/90 liquid-transition" onClick={() => openSchedulingPopup()}>
                   <Calendar className="w-4 h-4 mr-2" />
                   {t.appointment.button}
                 </Button>
