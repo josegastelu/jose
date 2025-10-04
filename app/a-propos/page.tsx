@@ -30,12 +30,15 @@ const content = {
     qualifications: {
       title: "Qualifications & Parcours",
       items: [
-        "Thérapeute clinicien membre OTSTCFQ",
-        "Formation centrée sur la relation thérapeutique",
-        "Maîtrise clinique en dépendances (en cours) – FMSS, Université de Sherbrooke",
-        "Recherche (essai-synthèse) : liens entre dépendances et résilience (facteur de protection)",
-        "Pratique en collaboration : Clinique Duluth, GreenShield Santé, Santé Canada",
-        "Bureau situé sur le Plateau Mont-Royal, Montréal",
+        "Master en dépendances – En cours – UdeS.",
+        "BTS. Clinique – UQAT.",
+        "B.sc. Mult. Profil intervention – UdeM.",
+        "Int. Psychosociale – UQÀM.",
+        "Formations :",
+        "C. prévention de suicide – Santé Mentale.",
+        "Thérapie cognitive-comportementale (TCC) – Santé Mentale.",
+        "Couples, relations et troubles anxieux.",
+        "Thérapie conjugale en action.",
       ],
     },
     approach: {
@@ -47,6 +50,7 @@ const content = {
         { title: "Cognitivo-comportementale (TCC)", description: "Adapter pensées et comportements à vos objectifs" },
         { title: "Motivationnelle", description: "Soutenir le changement à votre rythme" },
         { title: "Systémique", description: "Prendre en compte les dynamiques relationnelles" },
+        { title: "Mindfulness", description: "Développer la pleine conscience et la régulation émotionnelle" },
       ],
     },
     practice: {
@@ -56,6 +60,13 @@ const content = {
       collaborations:
         "Présentement, ma pratique clinique se déploie en collaboration avec la Clinique Duluth, GreenShield Santé ainsi que Santé Canada.",
       location: "Mon bureau est situé sur le Plateau Mont-Royal.",
+    },
+    emergency: {
+      title: "Urgence santé mentale",
+      items: [
+        "Services généraux d’urgence : 911",
+        "Centre de crise et de prévention du suicide : 1-866-277-3553",
+      ],
     },
     cta: {
       title: "Prêt à commencer ?",
@@ -214,6 +225,22 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Emergency Section */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <Card className="glass-card border-0">
+            <CardContent className="p-8">
+              <h3 className="font-serif text-2xl font-bold mb-4">{t.emergency.title}</h3>
+              <ul className="space-y-2">
+                {t.emergency.items.map((item: string, idx: number) => (
+                  <li key={idx} className="text-foreground">{item}</li>
+                ))}
+              </ul>
             </CardContent>
           </Card>
         </div>
