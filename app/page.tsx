@@ -2,11 +2,10 @@
 
 import { useState } from "react"
 import { Navigation } from "@/components/navigation"
-import { FloatingTestimonial } from "@/components/floating-testimonial"
 import { openSchedulingPopup } from "@/components/googleScheduler"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Calendar, Heart, Users, Video, Star, ArrowRight } from "lucide-react"
+import { Calendar, Heart, Users, Video } from "lucide-react"
 
 const content = {
   fr: {
@@ -115,7 +114,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       <Navigation currentLang={currentLang} onLanguageChange={setCurrentLang} />
 
-      <FloatingTestimonial currentLang={currentLang} />
+      
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -224,53 +223,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">{t.testimonials.title}</h2>
-            <p className="text-lg text-muted-foreground">{t.testimonials.subtitle}</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="glass-card liquid-transition border-0">
-              <CardContent className="p-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
-                </div>
-                <p className="text-foreground mb-4 leading-relaxed">"{t.testimonials.testimonial1.text}"</p>
-                <p className="text-muted-foreground font-medium">— {t.testimonials.testimonial1.author}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="glass-card liquid-transition border-0">
-              <CardContent className="p-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
-                </div>
-                <p className="text-foreground mb-4 leading-relaxed">"{t.testimonials.testimonial2.text}"</p>
-                <p className="text-muted-foreground font-medium">— {t.testimonials.testimonial2.author}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="glass-card liquid-transition border-0">
-              <CardContent className="p-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
-                </div>
-                <p className="text-foreground mb-4 leading-relaxed">"{t.testimonials.testimonial3.text}"</p>
-                <p className="text-muted-foreground font-medium">— {t.testimonials.testimonial3.author}</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary/5">
