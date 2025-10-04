@@ -55,11 +55,11 @@ const content = {
       },
       phone: {
         title: "Téléphone",
-        number: "+33 1 23 45 67 89",
+        number: "+1 514-618-4390",
       },
       email: {
         title: "E-mail",
-        address: "jose.gastelu@psychologue.fr",
+        address: "contact@jose-gastelu.com",
       },
       hours: {
         title: "Horaires d'ouverture",
@@ -114,11 +114,11 @@ const content = {
       },
       phone: {
         title: "Teléfono",
-        number: "+33 1 23 45 67 89",
+        number: "+1 514-618-4390",
       },
       email: {
         title: "Correo electrónico",
-        address: "jose.gastelu@psychologue.fr",
+        address: "contact@jose-gastelu.com",
       },
       hours: {
         title: "Horarios de atención",
@@ -205,7 +205,7 @@ export default function ContactPage() {
                 <p className="text-muted-foreground mb-4">{t.whatsapp.subtitle}</p>
                 <Button
                   className="bg-green-600 hover:bg-green-700 liquid-transition"
-                  onClick={() => window.open(`https://wa.me/33123456789?text=${whatsappMessage}`, "_blank")}
+                  onClick={() => window.open(`https://wa.me/15146184390?text=${whatsappMessage}`, "_blank")}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   {t.whatsapp.button}
@@ -433,21 +433,25 @@ export default function ContactPage() {
           <Card className="glass-card border-0 bg-red-50/80">
             <CardContent className="p-8">
               <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
-                {currentLang === "fr" ? "Urgence psychologique" : "Emergencia psicológica"}
+                {currentLang === "fr" ? "Urgence santé mentale" : "Emergencia de salud mental"}
               </h2>
               <p className="text-muted-foreground mb-6">
                 {currentLang === "fr"
                   ? "Si vous traversez une crise ou avez des pensées suicidaires, contactez immédiatement :"
-                  : "Si está atravesando una crisis o tiene pensamientos suicidas, contacte inmediatamente:"}
+                  : "Si atraviesa una crisis o tiene pensamientos suicidas, contacte inmediatamente:"}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="outline" className="border-red-200 text-red-700 hover:bg-red-50 bg-transparent">
                   <Phone className="w-4 h-4 mr-2" />
-                  {currentLang === "fr" ? "SOS Amitié: 09 72 39 40 50" : "SOS Amistad: 09 72 39 40 50"}
+                  {currentLang === "fr"
+                    ? "Services généraux d’urgence : 911"
+                    : "Servicios generales de emergencia: 911"}
                 </Button>
                 <Button variant="outline" className="border-red-200 text-red-700 hover:bg-red-50 bg-transparent">
                   <Phone className="w-4 h-4 mr-2" />
-                  {currentLang === "fr" ? "Urgences: 15" : "Emergencias: 15"}
+                  {currentLang === "fr"
+                    ? "Centre de crise et de prévention du suicide : 1-866-277-3553"
+                    : "Centro de crisis y prevención del suicidio: 1-866-277-3553"}
                 </Button>
               </div>
             </CardContent>
