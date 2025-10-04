@@ -215,22 +215,9 @@ export default function HomePage() {
           </div>
 
           <div className="glass-card rounded-xl p-8">
-            <iframe
-              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25LxAN7sJ6zgDmMHcFNqWX3y4jrn0JAjpwnsxOb4GZjMaGfrIUc6JBmKRyA7tJ9rHc5iTtJ6Nu?gv=true"
-              style={{ border: 0 }}
-              width="100%"
-              height={600}
-              frameBorder="0"
-            ></iframe>
+    
+<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2JSblHLarI-8265xED0s68ramEfpt5PA7ShCL1II3He3GwpfhM8Fl5aS4Ro6C-9gT4txLJjeCl?gv=true" width="100%" height="600" ></iframe>
 
-            {/* Alternative booking button */}
-            <div className="text-center mt-6">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 liquid-transition">
-                <Calendar className="w-5 h-5 mr-2" />
-                {t.hero.cta}
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </div>
           </div>
         </div>
       </section>
