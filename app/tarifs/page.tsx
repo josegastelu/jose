@@ -52,19 +52,7 @@ const content = {
           "Techniques relationnelles",
         ],
       },
-      family: {
-        title: "Thérapie Familiale",
-        priceInPerson: "120$",
-        priceVideo: "110$",
-        duration: "60 minutes",
-        description: "Séance pour harmoniser les relations au sein de votre famille",
-        features: [
-          "Dynamiques familiales",
-          "Communication intergénérationnelle",
-          "Résolution des tensions",
-          "Renforcement des liens familiaux",
-        ],
-      },
+      
       student: {
         title: "Tarif Étudiant",
         priceInPerson: "90$",
@@ -344,51 +332,7 @@ export default function PricingPage() {
               </CardContent>
             </Card>
 
-            {/* Family Therapy */}
-            <Card className="glass-card liquid-transition border-0">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mr-4">
-                    <Home className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-2xl font-bold text-foreground">{t.pricing.family.title}</h3>
-                    <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                      <Clock className="w-4 h-4" />
-                      <span>{t.pricing.family.duration}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Added dual pricing display for family therapy */}
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center justify-between p-3 bg-primary/5 rounded-lg">
-                    <div className="flex items-center space-x-2">
-                      <MapPin className="w-4 h-4 text-primary" />
-                      <span className="text-sm font-medium text-foreground">{t.sessionTypes.inPerson}</span>
-                    </div>
-                    <div className="text-xl font-bold text-primary">{t.pricing.family.priceInPerson}</div>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-secondary/5 rounded-lg">
-                    <div className="flex items-center space-x-2">
-                      <Video className="w-4 h-4 text-secondary" />
-                      <span className="text-sm font-medium text-foreground">{t.sessionTypes.video}</span>
-                    </div>
-                    <div className="text-xl font-bold text-secondary">{t.pricing.family.priceVideo}</div>
-                  </div>
-                </div>
-
-                <p className="text-muted-foreground mb-6 leading-relaxed">{t.pricing.family.description}</p>
-                <div className="space-y-2">
-                  {t.pricing.family.features.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
-                      <span className="text-sm text-foreground">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            
 
             {/* Student Pricing */}
             <Card className="glass-card liquid-transition border-0 bg-gradient-to-br from-primary/5 to-secondary/5">

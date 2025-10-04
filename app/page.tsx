@@ -184,15 +184,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="glass-card liquid-transition hover:scale-105 border-0">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="font-serif text-xl font-semibold mb-3">{t.services.family.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{t.services.family.description}</p>
-              </CardContent>
-            </Card>
+            
 
             <Card className="glass-card liquid-transition hover:scale-105 border-0">
               <CardContent className="p-6 text-center">
