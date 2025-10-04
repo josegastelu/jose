@@ -33,6 +33,7 @@ const navItems = {
 
 export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const visibleItems = navItems[currentLang].filter((item) => item.href !== "/blog")
 
   return (
     <nav className="glass-effect fixed top-0 left-0 right-0 z-50 liquid-transition">
@@ -48,7 +49,7 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems[currentLang].map((item) => (
+            {visibleItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -96,7 +97,7 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden glass-card mt-2 rounded-lg p-4 space-y-4">
-            {navItems[currentLang].map((item) => (
+            {visibleItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
