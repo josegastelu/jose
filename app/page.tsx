@@ -163,7 +163,7 @@ export default function HomePage() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t.services.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="glass-card liquid-transition hover:scale-105 border-0">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
