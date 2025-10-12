@@ -10,7 +10,7 @@ import { Calendar, Heart, Users, Video } from "lucide-react"
 const content = {
   fr: {
     hero: {
-      title: "Votre santé mentale, ma priorité",
+      title: "Thérapeute clinicien\nen sante mental",
       subtitle: "Accompagnement thérapeutique avec une approche humaniste et empathique",
       cta: "Prendre rendez-vous",
       freeCta: "Consultation gratuite 15min",
@@ -130,7 +130,7 @@ export default function HomePage() {
         <div className="absolute inset-0 glass-effect" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 liquid-transition">
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 liquid-transition whitespace-pre-line">
             {t.hero.title}
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">

@@ -58,7 +58,7 @@ const content = {
         priceInPerson: "90$",
         priceVideo: "80$",
         duration: "50 minutes",
-        description: "Tarif préférentiel pour les étudiants sur présentation d'un justificatif",
+        description: "Tarif solidaire pour les étudiants",
         features: [
           "Tarif réduit",
           "Même qualité d'accompagnement",
