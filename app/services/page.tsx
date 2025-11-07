@@ -98,9 +98,9 @@ const content = {
       approach: {
         title: "Mon approche thérapeutique",
         description:
-          "Son approche est d'abord humaniste. Elle se caractérise par une compréhension globale de l'individu et l'environnement dans lequel il interagit. Il fonde sa pratique sur l'ici et maintenant afin de développer des pistes de solutions dans la confiance et le respect du rythme de la personne. L'empathie, l'ouverture d'esprit et la bienveillance sont des valeurs qui guident sa pratique professionnelle.",
+          "Mon approche est d’abord humaniste. Elle repose sur une compréhension globale de la personne et de l’environnement dans lequel elle évolue. J’ancre ma pratique dans l’« ici et maintenant », afin de co-construire des pistes de solution dans un climat de confiance, tout en respectant le rythme de chacun. L’empathie, l’ouverture d’esprit et la bienveillance sont les valeurs qui guident ma pratique professionnelle.",
         methods:
-          "Dans la spécificité de l'intervention thérapeutique, les approches cognitivo-comportementale (TCC), psychosociale, structurelles, centrée sur les solutions, interculturelles et bien d'autres sont utilisées dépendamment de la problématique.",
+          "Dans l’intervention thérapeutique, j’intègre différentes approches selon les besoins de la personne : l’approche cognitivo-comportementale (TCC), humaniste.",
       },
     },
     process: {

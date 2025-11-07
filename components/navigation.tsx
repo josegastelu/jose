@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Globe } from "lucide-react"
@@ -35,6 +35,19 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false)
   const visibleItems = navItems[currentLang].filter((item) => item.href !== "/blog")
 
+  // Initialize language from localStorage on first mount
+  useEffect(() => {
+    try {
+      const stored = typeof window !== 'undefined' ? localStorage.getItem('preferredLang') : null
+      if (stored === 'fr' || stored === 'es') {
+        onLanguageChange(stored)
+      }
+    } catch (_) {
+      // no-op if storage is unavailable
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <nav className="glass-effect fixed top-0 left-0 right-0 z-50 liquid-transition">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +78,10 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
               <Button
                 variant={currentLang === "fr" ? "default" : "ghost"}
                 size="sm"
-                onClick={() => onLanguageChange("fr")}
+                onClick={() => {
+                  try { localStorage.setItem('preferredLang', 'fr') } catch (_) {}
+                  onLanguageChange("fr")
+                }}
                 className="text-xs"
               >
                 FR
@@ -73,7 +89,10 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
               <Button
                 variant={currentLang === "es" ? "default" : "ghost"}
                 size="sm"
-                onClick={() => onLanguageChange("es")}
+                onClick={() => {
+                  try { localStorage.setItem('preferredLang', 'es') } catch (_) {}
+                  onLanguageChange("es")
+                }}
                 className="text-xs"
               >
                 ES
@@ -114,7 +133,10 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
                 <Button
                   variant={currentLang === "fr" ? "default" : "ghost"}
                   size="sm"
-                  onClick={() => onLanguageChange("fr")}
+                  onClick={() => {
+                    try { localStorage.setItem('preferredLang', 'fr') } catch (_) {}
+                    onLanguageChange("fr")
+                  }}
                   className="text-xs"
                 >
                   FR
@@ -122,7 +144,10 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
                 <Button
                   variant={currentLang === "es" ? "default" : "ghost"}
                   size="sm"
-                  onClick={() => onLanguageChange("es")}
+                  onClick={() => {
+                    try { localStorage.setItem('preferredLang', 'es') } catch (_) {}
+                    onLanguageChange("es")
+                  }}
                   className="text-xs"
                 >
                   ES

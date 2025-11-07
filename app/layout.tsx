@@ -17,7 +17,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Jose Gastelu - Psychologue Professionnel",
+  title: "Jose Gastelu - Thérapeute",
   description:
     "Thérapie individuelle, de couple et familiale. Consultations en ligne disponibles. Approche humaniste et empathique.",
   generator: "v0.app",

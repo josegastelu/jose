@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Navigation } from "@/components/navigation"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { openSchedulingPopup } from "@/components/googleScheduler"
 import { Heart, Users, Home, GraduationCap, Clock, Calendar, CheckCircle, Gift, Video, MapPin } from "lucide-react"
@@ -54,11 +54,11 @@ const content = {
       },
       
       student: {
-        title: "Tarif Étudiant",
+        title: "Tarif Étudiant.e.",
         priceInPerson: "90$",
         priceVideo: "80$",
         duration: "50 minutes",
-        description: "Tarif solidaire pour les étudiants",
+        description: "prix solidaire pour les étudiants",
         features: [
           "Tarif réduit",
           "Même qualité d'accompagnement",
@@ -73,13 +73,13 @@ const content = {
     },
     payment: {
       title: "Modalités de Paiement",
-      methods: ["Espèces", "Chèque", "Virement bancaire", "Paiement en ligne sécurisé"],
+      methods: ["virement Interac", "Paiement en ligne sécurisé"],
       note: "Le paiement s'effectue à la fin de chaque séance. Possibilité de règlement mensuel sur demande.",
     },
     insurance: {
       title: "Remboursement",
       description:
-        "Certaines mutuelles remboursent les consultations de psychologie. N'hésitez pas à vous renseigner auprès de votre assurance complémentaire.",
+        " certaines  assurances remboursent les consultations thérapeutiques. N’hésitez par à vous renseigner auprès de votre assurance d’emploi.",
     },
     cta: {
       title: "Prêt à commencer ?",
@@ -131,19 +131,6 @@ const content = {
           "Técnicas relacionales",
         ],
       },
-      family: {
-        title: "Terapia Familiar",
-        priceInPerson: "120$",
-        priceVideo: "110$",
-        duration: "60 minutos",
-        description: "Sesión para armonizar las relaciones dentro de su familia",
-        features: [
-          "Dinámicas familiares",
-          "Comunicación intergeneracional",
-          "Resolución de tensiones",
-          "Fortalecimiento de vínculos familiares",
-        ],
-      },
       student: {
         title: "Tarifa Estudiante",
         priceInPerson: "90$",
@@ -164,17 +151,17 @@ const content = {
     },
     payment: {
       title: "Modalidades de Pago",
-      methods: ["Efectivo", "Cheque", "Transferencia bancaria", "Pago en línea seguro"],
+      methods: ["Transferencia Interac", "Pago en línea seguro"],
       note: "El pago se realiza al final de cada sesión. Posibilidad de pago mensual bajo solicitud.",
     },
     insurance: {
       title: "Reembolso",
       description:
-        "Algunas mutuas reembolsan las consultas de psicología. No dude en informarse con su seguro complementario.",
+        "Algunos seguros reembolsan las consultas terapéuticas. Infórmese con su seguro de empleo.",
     },
     cta: {
       title: "¿Listo para comenzar?",
-      description: "Reserve su consulta gratuita de 15 minutes",
+      description: "Reserve su consulta gratuita de 15 minutos",
       button: "Consulta gratuita",
     },
   },
@@ -251,10 +238,8 @@ export default function PricingPage() {
                   </div>
                   <div>
                     <h3 className="font-serif text-2xl font-bold text-foreground">{t.pricing.individual.title}</h3>
-                    <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                      <Clock className="w-4 h-4" />
-                      <span>{t.pricing.individual.duration}</span>
-                    </div>
+                    <p className="text-muted-foreground mb-6 leading-relaxed min-h-20">{t.pricing.individual.description}</p>
+
                   </div>
                 </div>
 
@@ -275,7 +260,6 @@ export default function PricingPage() {
                   </div>
                 </div>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">{t.pricing.individual.description}</p>
                 <div className="space-y-2">
                   {t.pricing.individual.features.map((feature, index) => (
                     <div key={index} className="flex items-center space-x-2">
@@ -285,6 +269,10 @@ export default function PricingPage() {
                   ))}
                 </div>
               </CardContent>
+              <CardFooter className="justify-end mt-auto px-8 pt-0">
+                <Clock className="w-4 h-4" />
+                <span className="ml-2">{t.pricing.individual.duration}</span>
+              </CardFooter>
             </Card>
 
             {/* Couple Therapy */}
@@ -296,10 +284,7 @@ export default function PricingPage() {
                   </div>
                   <div>
                     <h3 className="font-serif text-2xl font-bold text-foreground">{t.pricing.couple.title}</h3>
-                    <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                      <Clock className="w-4 h-4" />
-                      <span>{t.pricing.couple.duration}</span>
-                    </div>
+                    <p className="text-muted-foreground mb-6 leading-relaxed min-h-20">{t.pricing.couple.description}</p>
                   </div>
                 </div>
 
@@ -320,7 +305,6 @@ export default function PricingPage() {
                   </div>
                 </div>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">{t.pricing.couple.description}</p>
                 <div className="space-y-2">
                   {t.pricing.couple.features.map((feature, index) => (
                     <div key={index} className="flex items-center space-x-2">
@@ -330,6 +314,10 @@ export default function PricingPage() {
                   ))}
                 </div>
               </CardContent>
+              <CardFooter className="justify-end mt-auto px-8 pt-0">
+                <Clock className="w-4 h-4" />
+                <span className="ml-2">{t.pricing.couple.duration}</span>
+              </CardFooter>
             </Card>
 
             
@@ -343,10 +331,9 @@ export default function PricingPage() {
                   </div>
                   <div>
                     <h3 className="font-serif text-2xl font-bold text-foreground">{t.pricing.student.title}</h3>
-                    <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                      <Clock className="w-4 h-4" />
-                      <span>{t.pricing.student.duration}</span>
-                    </div>
+                    <p className="text-muted-foreground mb-6 leading-relaxed min-h-20">{t.pricing.student.description}</p>
+
+
                   </div>
                 </div>
 
@@ -367,7 +354,6 @@ export default function PricingPage() {
                   </div>
                 </div>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">{t.pricing.student.description}</p>
                 <div className="space-y-2">
                   {t.pricing.student.features.map((feature, index) => (
                     <div key={index} className="flex items-center space-x-2">
@@ -376,7 +362,12 @@ export default function PricingPage() {
                     </div>
                   ))}
                 </div>
+
               </CardContent>
+              <CardFooter className="justify-end mt-auto px-8 pt-0">
+                <Clock className="w-4 h-4" />
+                <span className="ml-2">{t.pricing.student.duration}</span>
+              </CardFooter>
             </Card>
           </div>
         </div>

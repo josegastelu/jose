@@ -18,9 +18,9 @@ const content = {
       "Je suis thérapeute clinicien membre OTSTCFQ. Ma formation est centrée sur la relation thérapeutique. Actuellement, j’approfondis mes connaissances à la Faculté de médecine et des sciences de la santé de l’Université de Sherbrooke, dans le cadre de la maîtrise clinique en dépendances. Mes travaux portent sur une recherche de type essai-synthèse, explorant les liens entre les dépendances et la résilience en tant que facteur de protection.",
     philosophy: {
       title: "Ma Philosophie",
-      subtitle: "Une approche d'abord humaniste, ancrée dans l'ici et maintenant",
+      subtitle: "Mon approche est d’abord humaniste.",
       description:
-        "Mon approche repose sur une compréhension globale de la personne et de son environnement. J'ancre ma pratique dans l'« ici et maintenant » afin de co-construire des pistes de solution dans un climat de confiance, tout en respectant le rythme de chacun. L'empathie, l'ouverture d'esprit et la bienveillance sont les valeurs qui guident ma pratique professionnelle.",
+        "Elle repose sur une compréhension globale de la personne et de l’environnement dans lequel elle évolue. J’ancre ma pratique dans l’« ici et maintenant », afin de co-construire des pistes de solution dans un climat de confiance, tout en respectant le rythme de chacun. L’empathie, l’ouverture d’esprit et la bienveillance sont les valeurs qui guident ma pratique professionnelle. Dans l’intervention thérapeutique, j’intègre différentes approches selon les besoins de la personne: l’approche cognitivo-comportementale (TCC), humaniste.",
       values: [
         { title: "Empathie", description: "Être à l'écoute de votre vécu, sans jugement" },
         { title: "Ouverture d'esprit", description: "Accueillir votre singularité et votre contexte" },

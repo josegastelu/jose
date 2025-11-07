@@ -45,11 +45,6 @@ const content = {
           "Je comprends que des imprévus peuvent survenir. Je demande simplement de me prévenir au moins 24h à l'avance pour annuler ou reporter un rendez-vous. En cas d'annulation tardive (moins de 24h) sans motif valable, la séance pourra être facturée. Cette politique permet de respecter le temps de chacun et de proposer le créneau à d'autres patients si nécessaire.",
       },
       {
-        question: "Les consultations sont-elles remboursées ?",
-        answer:
-          "Les consultations de psychologue ne sont pas remboursées par la Sécurité Sociale, mais de nombreuses mutuelles proposent un remboursement partiel ou total. Je vous encourage à vous renseigner auprès de votre complémentaire santé. Je peux vous fournir une facture détaillée pour vos démarches de remboursement.",
-      },
-      {
         question: "Comment prendre rendez-vous ?",
         answer:
           "Vous pouvez prendre rendez-vous directement via le calendrier en ligne sur ce site, m'appeler ou m'envoyer un message WhatsApp. Je propose également une consultation gratuite de 15 minutes pour faire connaissance et répondre à vos premières questions avant de commencer un suivi thérapeutique.",
@@ -101,11 +96,6 @@ const content = {
         question: "¿Qué pasa si debo cancelar una cita?",
         answer:
           "Entiendo que pueden surgir imprevistos. Solo pido que me avise con al menos 24h de antelación para cancelar o posponer una cita. En caso de cancelación tardía (menos de 24h) sin motivo válido, la sesión podrá ser facturada. Esta política permite respetar el tiempo de cada uno y ofrecer el horario a otros pacientes si es necesario.",
-      },
-      {
-        question: "¿Las consultas son reembolsadas?",
-        answer:
-          "Las consultas de psicólogo no son reembolsadas por la Seguridad Social, pero muchas mutuas proponen un reembolso parcial o total. Le animo a informarse con su seguro complementario. Puedo proporcionarle una factura detallada para sus trámites de reembolso.",
       },
       {
         question: "¿Cómo reservar una cita?",

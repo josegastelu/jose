@@ -49,9 +49,9 @@ const content = {
     contact: {
       title: "Informations de contact",
       address: {
-        title: "Adresse du cabinet",
-        line1: "123 Rue de la Paix",
-        line2: "75001 Paris, France",
+        // title: "Adresse du cabinet",
+        // line1: "123 Rue de la Paix",
+        // line2: "75001 Paris, France",
       },
       phone: {
         title: "Téléphone",
