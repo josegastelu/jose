@@ -172,6 +172,93 @@ export const blogPosts = {
       `,
     },
   },
+  en: {
+    "gerer-anxiete-quotidien": {
+      title: "How to manage anxiety day to day",
+      excerpt:
+        "Anxiety is part of life, but it shouldn’t control it. Discover practical strategies to regain your calm.",
+      category: "mentalHealth",
+      date: "2024-01-15",
+      readTime: "5 min",
+      image: "/blog-anxiety-management.jpg",
+      content: `
+        <p>Anxiety is a natural reaction to perceived threat. When it becomes excessive or persistent, it can significantly impact quality of life.</p>
+
+        <h2>Understanding anxiety</h2>
+        <p>Anxiety can show up as physical symptoms (palpitations, sweating, muscle tension) and psychological ones (worry, rumination, difficulty concentrating). Recognizing these signals helps you manage them better.</p>
+
+        <h2>Immediate techniques</h2>
+        <h3>1. Deep breathing</h3>
+        <p>Inhale slowly through the nose for 4 seconds, hold for 4, then exhale through the mouth for 6. Repeat 5–10 times.</p>
+
+        <h3>2. Grounding in the present</h3>
+        <p>Use the 5‑4‑3‑2‑1 technique: identify 5 things you see, 4 you hear, 3 you touch, 2 you smell, and 1 you taste.</p>
+
+        <h3>3. Progressive muscle relaxation</h3>
+        <p>Tense then release each muscle group, starting at the feet and moving up to the head.</p>
+
+        <h2>Long‑term strategies</h2>
+        <p>Beyond quick tools, build habits that increase stress resilience:</p>
+        <ul>
+          <li>Maintain a regular sleep routine</li>
+          <li>Exercise regularly</li>
+          <li>Limit caffeine and alcohol</li>
+          <li>Cultivate positive social connections</li>
+          <li>Practice meditation or mindfulness</li>
+        </ul>
+
+        <h2>When to seek help?</h2>
+        <p>If anxiety persists despite your efforts, consider professional support. Cognitive‑behavioural therapy is particularly effective for anxiety disorders.</p>
+
+        <p>Remember: asking for help is a sign of strength. You deserve to live peacefully.</p>
+      `,
+    },
+    "communication-couple": {
+      title: "Keys to healthy communication as a couple",
+      excerpt:
+        "Effective communication is the foundation of a fulfilling relationship. Learn techniques to better understand each other.",
+      category: "relationships",
+      date: "2024-01-10",
+      readTime: "7 min",
+      image: "/blog-couple-communication.jpg",
+      content: `
+        <p>Communication is the pillar of a satisfying romantic relationship. It takes learnable skills we can all develop.</p>
+
+        <h2>Foundations of healthy communication</h2>
+        <h3>Active listening</h3>
+        <p>Listening is more than waiting for your turn to speak. Active listening means:</p>
+        <ul>
+          <li>Giving your partner your full attention</li>
+          <li>Rephrasing what you understood</li>
+          <li>Asking clarifying questions</li>
+          <li>Avoiding judgment or interruption</li>
+        </ul>
+
+        <h3>Expressing needs</h3>
+        <p>Express needs clearly and kindly. Use “I” instead of accusatory “you”: “I feel…” instead of “You always…”.</p>
+
+        <h2>Managing conflict constructively</h2>
+        <h3>Time‑out rule</h3>
+        <p>When emotions run high, take a break. Agree on a signal to resume later.</p>
+
+        <h3>Focus on the problem, not the person</h3>
+        <p>Work together on the issue rather than against each other. You’re a team facing the challenge.</p>
+
+        <h2>Cultivating emotional intimacy</h2>
+        <p>Regularly share feelings, dreams, and concerns. Create distraction‑free moments to connect.</p>
+
+        <h2>Pitfalls to avoid</h2>
+        <ul>
+          <li>Generalizations (“always”, “never”)</li>
+          <li>Rehashing old grievances</li>
+          <li>Contempt and sarcasm</li>
+          <li>Withdrawal or punitive silence</li>
+        </ul>
+
+        <p>Healthy communication is cultivated daily. Be patient with yourself and your partner.</p>
+      `,
+    },
+  },
 }
 
 export const categories = {
@@ -184,6 +271,11 @@ export const categories = {
     mentalHealth: "Salud mental",
     relationships: "Relaciones",
     therapy: "Terapia",
+  },
+  en: {
+    mentalHealth: "Mental health",
+    relationships: "Relationships",
+    therapy: "Therapy",
   },
 }
 

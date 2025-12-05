@@ -15,7 +15,7 @@ const categoryIcons = {
 }
 
 export default function PostPageClient({ params }: { params: { slug: string } }) {
-  const [currentLang, setCurrentLang] = useState<"fr" | "es">("fr")
+  const [currentLang, setCurrentLang] = useState<"fr" | "es" | "en">("fr")
 
   const post = blogPosts[currentLang][params.slug as keyof (typeof blogPosts)[typeof currentLang]]
 
@@ -23,7 +23,8 @@ export default function PostPageClient({ params }: { params: { slug: string } })
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
-    return date.toLocaleDateString(currentLang === "fr" ? "fr-FR" : "es-ES", {
+    const locale = currentLang === "fr" ? "fr-FR" : currentLang === "es" ? "es-ES" : "en-US"
+    return date.toLocaleDateString(locale, {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -50,7 +51,7 @@ export default function PostPageClient({ params }: { params: { slug: string } })
           <Link href="/blog">
             <Button variant="ghost" className="mb-8 text-white hover:text-white/80 liquid-transition">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              {currentLang === "fr" ? "Retour au blog" : "Volver al blog"}
+              {currentLang === "fr" ? "Retour au blog" : currentLang === "es" ? "Volver al blog" : "Back to blog"}
             </Button>
           </Link>
 
@@ -78,7 +79,7 @@ export default function PostPageClient({ params }: { params: { slug: string } })
             </div>
             <Button variant="ghost" size="sm" className="text-white hover:text-white/80 liquid-transition">
               <Share2 className="w-4 h-4 mr-2" />
-              {currentLang === "fr" ? "Partager" : "Compartir"}
+              {currentLang === "fr" ? "Partager" : currentLang === "es" ? "Compartir" : "Share"}
             </Button>
           </div>
         </div>
@@ -110,16 +111,18 @@ export default function PostPageClient({ params }: { params: { slug: string } })
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-card rounded-xl p-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-              {currentLang === "fr" ? "Besoin d'accompagnement ?" : "¿Necesita acompañamiento?"}
+              {currentLang === "fr" ? "Besoin d'accompagnement ?" : currentLang === "es" ? "¿Necesita acompañamiento?" : "Need support?"}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               {currentLang === "fr"
                 ? "Si cet article vous a interpellé, n'hésitez pas à prendre rendez-vous pour un accompagnement personnalisé."
-                : "Si este artículo le ha llamado la atención, no dude en hacer una cita para un acompañamiento personalizado."}
+                : currentLang === "es"
+                ? "Si este artículo le ha llamado la atención, no dude en hacer una cita para un acompañamiento personalizado."
+                : "If this article resonated with you, feel free to book a session for personalized support."}
             </p>
             <Button size="lg" className="bg-primary hover:bg-primary/90 liquid-transition text-lg px-8 py-3">
               <Calendar className="w-5 h-5 mr-2" />
-              {currentLang === "fr" ? "Prendre rendez-vous" : "Hacer una cita"}
+              {currentLang === "fr" ? "Prendre rendez-vous" : currentLang === "es" ? "Hacer una cita" : "Book an appointment"}
             </Button>
           </div>
         </div>

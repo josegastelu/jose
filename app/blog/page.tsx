@@ -157,6 +157,73 @@ const content = {
       },
     ],
   },
+  en: {
+    hero: { title: "Blog", subtitle: "Insights and reflections on mental health and well‑being" },
+    readMore: "Read more",
+    categories: { all: "All", mentalHealth: "Mental health", relationships: "Relationships", therapy: "Therapy" },
+    posts: [
+      {
+        id: "gerer-anxiete-quotidien",
+        title: "How to manage anxiety day to day",
+        excerpt:
+          "Anxiety is part of life, but it shouldn’t control it. Discover practical strategies to regain your calm.",
+        category: "mentalHealth",
+        date: "2024-01-15",
+        readTime: "5 min",
+        image: "/blog-anxiety-management.jpg",
+      },
+      {
+        id: "communication-couple",
+        title: "Keys to healthy communication as a couple",
+        excerpt:
+          "Effective communication is the foundation of a fulfilling relationship. Learn techniques to better understand each other.",
+        category: "relationships",
+        date: "2024-01-10",
+        readTime: "7 min",
+        image: "/blog-couple-communication.jpg",
+      },
+      {
+        id: "estime-de-soi",
+        title: "Building positive self‑esteem",
+        excerpt:
+          "Self‑esteem influences every aspect of our lives. Discover how to cultivate a kinder relationship with yourself.",
+        category: "therapy",
+        date: "2024-01-05",
+        readTime: "6 min",
+        image: "/blog-self-esteem.jpg",
+      },
+      {
+        id: "stress-travail",
+        title: "Managing stress at work",
+        excerpt:
+          "Work stress can affect your well‑being. Explore methods to maintain work‑life balance.",
+        category: "mentalHealth",
+        date: "2023-12-28",
+        readTime: "8 min",
+        image: "/blog-work-stress.jpg",
+      },
+      {
+        id: "therapie-benefices",
+        title: "The benefits of therapy: demystifying misconceptions",
+        excerpt:
+          "Therapy is sometimes misunderstood. Discover how it can help you develop your resources.",
+        category: "therapy",
+        date: "2023-12-20",
+        readTime: "10 min",
+        image: "/blog-therapy-benefits.jpg",
+      },
+      {
+        id: "relations-familiales",
+        title: "Improving family relationships",
+        excerpt:
+          "Family dynamics can be complex. Learn how to create a more harmonious and caring family environment.",
+        category: "relationships",
+        date: "2023-12-15",
+        readTime: "6 min",
+        image: "/blog-family-relationships.jpg",
+      },
+    ],
+  },
 }
 
 const categoryIcons = {
@@ -166,7 +233,7 @@ const categoryIcons = {
 }
 
 export default function BlogPage() {
-  const [currentLang, setCurrentLang] = useState<"fr" | "es">("fr")
+  const [currentLang, setCurrentLang] = useState<"fr" | "es" | "en">("fr")
   const [selectedCategory, setSelectedCategory] = useState<string>("all")
   const t = content[currentLang]
 
@@ -175,7 +242,8 @@ export default function BlogPage() {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
-    return date.toLocaleDateString(currentLang === "fr" ? "fr-FR" : "es-ES", {
+    const locale = currentLang === "fr" ? "fr-FR" : currentLang === "es" ? "es-ES" : "en-US"
+    return date.toLocaleDateString(locale, {
       year: "numeric",
       month: "long",
       day: "numeric",

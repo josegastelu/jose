@@ -6,6 +6,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { openSchedulingPopup } from "@/components/googleScheduler"
 import { Heart, Users, Home, GraduationCap, Clock, Calendar, CheckCircle, Gift, Video, MapPin } from "lucide-react"
+import { PRICES } from "@/const/price"
 
 const content = {
   fr: {
@@ -28,8 +29,8 @@ const content = {
     pricing: {
       individual: {
         title: "Thérapie Individuelle",
-        priceInPerson: "110$",
-        priceVideo: "100$",
+        priceInPerson: PRICES.individual.inPerson,
+        priceVideo: PRICES.individual.video,
         duration: "50 minutes",
         description: "Séance personnalisée pour votre développement personnel et votre bien-être",
         features: [
@@ -41,8 +42,8 @@ const content = {
       },
       couple: {
         title: "Thérapie de Couple",
-        priceInPerson: "120$",
-        priceVideo: "110$",
+        priceInPerson: PRICES.couple.inPerson,
+        priceVideo: PRICES.couple.video,
         duration: "60 minutes",
         description: "Séance dédiée à l'amélioration de votre relation amoureuse",
         features: [
@@ -55,8 +56,8 @@ const content = {
       
       student: {
         title: "Tarif Étudiant.e.",
-        priceInPerson: "90$",
-        priceVideo: "80$",
+        priceInPerson: PRICES.student.inPerson,
+        priceVideo: PRICES.student.video,
         duration: "50 minutes",
         description: "prix solidaire pour les étudiants",
         features: [
@@ -107,8 +108,8 @@ const content = {
     pricing: {
       individual: {
         title: "Terapia Individual",
-        priceInPerson: "110$",
-        priceVideo: "100$",
+        priceInPerson: PRICES.individual.inPerson,
+        priceVideo: PRICES.individual.video,
         duration: "50 minutos",
         description: "Sesión personalizada para su desarrollo personal y bienestar",
         features: [
@@ -120,8 +121,8 @@ const content = {
       },
       couple: {
         title: "Terapia de Pareja",
-        priceInPerson: "120$",
-        priceVideo: "110$",
+        priceInPerson: PRICES.couple.inPerson,
+        priceVideo: PRICES.couple.video,
         duration: "60 minutos",
         description: "Sesión dedicada a mejorar su relación amorosa",
         features: [
@@ -133,8 +134,8 @@ const content = {
       },
       student: {
         title: "Tarifa Estudiante",
-        priceInPerson: "90$",
-        priceVideo: "80$",
+        priceInPerson: PRICES.student.inPerson,
+        priceVideo: PRICES.student.video,
         duration: "50 minutos",
         description: "Tarifa preferencial para estudiantes con justificante",
         features: [
@@ -165,10 +166,73 @@ const content = {
       button: "Consulta gratuita",
     },
   },
+  en: {
+    hero: { title: "Pricing", subtitle: "Transparent rates for quality support" },
+    freeConsultation: {
+      title: "Free Consultation",
+      subtitle: "15 minutes to get to know each other",
+      description:
+        "Before starting your therapeutic journey, I offer a free 15‑minute consultation. It’s an opportunity to meet, discuss your needs, and see if we’re a good fit.",
+      benefits: ["No commitment", "Presentation of my approach", "Assessment of your needs", "Q&A"],
+    },
+    pricing: {
+      individual: {
+        title: "Individual Therapy",
+        priceInPerson: PRICES.individual.inPerson,
+        priceVideo: PRICES.individual.video,
+        duration: "50 minutes",
+        description: "Personalized session for your personal growth and well‑being",
+        features: [
+          "Personalized support",
+          "Humanistic approach",
+          "Regular follow‑up",
+          "Tailored therapeutic tools",
+        ],
+      },
+      couple: {
+        title: "Couples Therapy",
+        priceInPerson: PRICES.couple.inPerson,
+        priceVideo: PRICES.couple.video,
+        duration: "60 minutes",
+        description: "Session dedicated to improving your relationship",
+        features: [
+          "Work on communication",
+          "Conflict resolution",
+          "Strengthening the bond",
+          "Relational techniques",
+        ],
+      },
+      student: {
+        title: "Student Rate",
+        priceInPerson: PRICES.student.inPerson,
+        priceVideo: PRICES.student.video,
+        duration: "50 minutes",
+        description: "Solidarity rate for students",
+        features: [
+          "Reduced rate",
+          "Same quality of support",
+          "Student ID required",
+          "Accessible and caring",
+        ],
+      },
+    },
+    sessionTypes: { inPerson: "In person", video: "Videoconference" },
+    payment: {
+      title: "Payment Methods",
+      methods: ["Interac e‑Transfer", "Secure online payment"],
+      note: "Payment is made at the end of each session. Monthly billing possible on request.",
+    },
+    insurance: {
+      title: "Reimbursement",
+      description:
+        "Some insurances reimburse therapeutic consultations. Check with your employment insurance.",
+    },
+    cta: { title: "Ready to start?", description: "Book your free 15‑minute consultation", button: "Free consultation" },
+  },
 }
 
 export default function PricingPage() {
-  const [currentLang, setCurrentLang] = useState<"fr" | "es">("fr")
+  const [currentLang, setCurrentLang] = useState<"fr" | "es" | "en">("fr")
   const t = content[currentLang]
 
   return (

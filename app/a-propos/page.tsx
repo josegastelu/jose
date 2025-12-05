@@ -80,6 +80,8 @@ const content = {
       title: "Acerca de Jose Gastelu",
       subtitle: "Psicólogo clínico con un enfoque humanista y empático",
     },
+    intro:
+      "Soy terapeuta clínico, miembro de la OTSTCFQ. Mi formación se centra en la relación terapéutica. Actualmente profundizo mis conocimientos en la Facultad de Medicina y Ciencias de la Salud de la Universidad de Sherbrooke, en la maestría clínica en dependencias. Mis trabajos abordan una investigación de tipo ensayo‑síntesis, explorando los vínculos entre las dependencias y la resiliencia como factor de protección.",
     philosophy: {
       title: "Mi Filosofía",
       subtitle: "Un enfoque centrado en la persona",
@@ -142,11 +144,89 @@ const content = {
       description: "Reserve una cita para una consulta gratuita de 15 minutos",
       button: "Reservar una consulta",
     },
+    practice: {
+      title: "Mi práctica",
+      intro:
+        "Ofrezco servicios de consulta terapéutica en seguimientos individuales y de pareja, a una clientela de jóvenes adultos y adultos, en presencial o videoconferencia en Montreal.",
+      collaborations:
+        "Actualmente, mi práctica clínica se desarrolla en colaboración con la Clinique Duluth, GreenShield Santé y Health Canada.",
+      location: "Mi consultorio está ubicado en el Plateau Mont‑Royal.",
+    },
+    emergency: {
+      title: "Emergencia de salud mental",
+      items: [
+        "Servicios generales de emergencia: 911",
+        "Centro de crisis y prevención del suicidio: 1-866-277-3553",
+      ],
+    },
+  },
+  en: {
+    hero: {
+      title: "About Jose Gastelu",
+      subtitle: "Clinical therapist, OTSTCFQ member, trained in the therapeutic relationship",
+    },
+    intro:
+      "I am a clinical therapist and OTSTCFQ member. My training focuses on the therapeutic relationship. I am currently furthering my knowledge at the Faculty of Medicine and Health Sciences at the University of Sherbrooke within the clinical master’s in addictions. My work involves an essay‑synthesis type of research exploring the links between addictions and resilience as a protective factor.",
+    philosophy: {
+      title: "My Philosophy",
+      subtitle: "My approach is first and foremost humanistic.",
+      description:
+        "It is based on a global understanding of the person and the environment in which they evolve. I anchor my practice in the ‘here and now’ to co‑construct avenues of solutions in a climate of trust while respecting everyone’s pace. Empathy, open‑mindedness and kindness are the values that guide my professional practice. In therapy, I integrate different approaches depending on the person’s needs: cognitive‑behavioural (CBT), humanistic.",
+      values: [
+        { title: "Empathy", description: "Listening to your experience without judgment" },
+        { title: "Open‑mindedness", description: "Welcoming your uniqueness and context" },
+        { title: "Kindness", description: "Offering a safe and respectful space" },
+        { title: "Respect for pace", description: "Moving forward at your rhythm, co‑constructing together" },
+      ],
+    },
+    qualifications: {
+      title: "Qualifications & Background",
+      items: [
+        "Master’s in addictions – In progress – UdeS.",
+        "Clinical B.T.S. – UQAT.",
+        "B.Sc. Mult. Intervention profile – UdeM.",
+        "Psychosocial Intervention – UQÀM.",
+        "Trainings:",
+        "Suicide prevention course – Mental Health.",
+        "Cognitive‑behavioural therapy (CBT) – Mental Health.",
+        "Couples, relationships and anxiety disorders.",
+        "Couples therapy in action.",
+      ],
+    },
+    approach: {
+      title: "My Therapeutic Approach",
+      description:
+        "I integrate different approaches according to your needs, always from a humanistic and collaborative perspective:",
+      methods: [
+        { title: "Humanistic", description: "Global, person‑centred understanding" },
+        { title: "Cognitive‑behavioural (CBT)", description: "Align thoughts and behaviours with your goals" },
+        { title: "Motivational", description: "Support change at your pace" },
+        { title: "Systemic", description: "Account for relational dynamics" },
+        { title: "Mindfulness", description: "Develop awareness and emotion regulation" },
+      ],
+    },
+    practice: {
+      title: "My Practice",
+      intro:
+        "I offer therapeutic consultations for individuals and couples, for young adults and adults, in person or via videoconference in Montreal.",
+      collaborations:
+        "My clinical practice currently operates in collaboration with Clinique Duluth, GreenShield Health and Health Canada.",
+      location: "My office is located in Plateau‑Mont‑Royal.",
+    },
+    emergency: {
+      title: "Mental health emergency",
+      items: ["General emergency services: 911", "Crisis and suicide prevention centre: 1-866-277-3553"],
+    },
+    cta: {
+      title: "Ready to get started?",
+      description: "Book a free 15‑minute consultation",
+      button: "Book a consultation",
+    },
   },
 }
 
 export default function AboutPage() {
-  const [currentLang, setCurrentLang] = useState<"fr" | "es">("fr")
+  const [currentLang, setCurrentLang] = useState<"fr" | "es" | "en">("fr")
   const t = content[currentLang]
 
   return (

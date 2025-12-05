@@ -114,10 +114,63 @@ const content = {
       button: "Contactarme",
     },
   },
+  en: {
+    hero: {
+      title: "Frequently Asked Questions",
+      subtitle: "Find answers to common questions about therapy",
+    },
+    faqs: [
+      {
+        question: "How does a therapy session work?",
+        answer:
+          "A therapy session typically lasts 50 minutes for individual consultations and 60 minutes for couples. We start by checking in on how you are, then explore the topics you want to work on. I use different therapeutic tools tailored to your needs. The space is caring and non-judgmental, allowing for open and constructive discussion.",
+      },
+      {
+        question: "How do online sessions work?",
+        answer:
+          "Online sessions take place through a secure and confidential platform. You only need a computer, tablet, or smartphone with a stable internet connection. The quality of care is the same as in-person. I also offer a free 15‑minute online consultation to get familiar with the tool and answer initial questions. Online sessions are ideal if travel is difficult or you prefer the comfort of home.",
+      },
+      {
+        question: "What is the minimum age to book a session?",
+        answer:
+          "I see clients from age 18. For minors, parental or legal guardian consent is required. If you are looking for support for a child or teen, I can refer you to colleagues specialized in child and adolescent psychology.",
+      },
+      {
+        question: "How often should I come to therapy?",
+        answer:
+          "Session frequency depends on your needs and goals. We usually start weekly or every two weeks, then space out as you progress. Some people benefit from occasional check-ins, others prefer regular support. We will define together the rhythm that fits you best.",
+      },
+      {
+        question: "How long does therapy last?",
+        answer:
+          "Therapy length varies for each person and their objectives. Some attend a few sessions to address a specific difficulty, others engage in deeper work over several months. There is no imposed duration — we regularly review your progress and needs.",
+      },
+      {
+        question: "What if I need to cancel an appointment?",
+        answer:
+          "I understand unexpected events happen. Please let me know at least 24 hours in advance to cancel or reschedule. For late cancellations (less than 24 hours) without valid reason, the session may be charged. This policy respects everyone’s time and allows me to offer the slot to others if needed.",
+      },
+      {
+        question: "How can I book an appointment?",
+        answer:
+          "You can book directly through the online calendar on this site, call me, or send a WhatsApp message. I also offer a free 15‑minute consultation to get to know each other and answer your initial questions before starting therapy.",
+      },
+      {
+        question: "What should I bring to my first session?",
+        answer:
+          "Just bring your motivation and questions. If you have relevant medical documents (prescriptions, reports, etc.), you may bring them — it’s optional. What matters most is coming with your concerns and goals so we can define the best approach together.",
+      },
+    ],
+    cta: {
+      title: "Still have questions?",
+      description: "Feel free to contact me for any additional information",
+      button: "Contact me",
+    },
+  },
 }
 
 export default function FAQPage() {
-  const [currentLang, setCurrentLang] = useState<"fr" | "es">("fr")
+  const [currentLang, setCurrentLang] = useState<"fr" | "es" | "en">("fr")
   const [openItems, setOpenItems] = useState<number[]>([])
   const t = content[currentLang]
 
@@ -127,7 +180,7 @@ export default function FAQPage() {
 
   return (
     <div className="min-h-screen">
-      <Navigation currentLang={currentLang} onLanguageChange={setCurrentLang} />
+      <Navigation currentLang={currentLang as any} onLanguageChange={setCurrentLang as any} />
 
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 overflow-hidden">

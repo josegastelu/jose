@@ -10,7 +10,7 @@ import { Calendar, Heart, Users, Video } from "lucide-react"
 const content = {
   fr: {
     hero: {
-      title: "Thérapeute clinicien\nen sante mental",
+      title: "Thérapeute clinicien\nen santé mentale",
       subtitle: "Accompagnement thérapeutique avec une approche humaniste et empathique",
       cta: "Prendre rendez-vous",
       freeCta: "Consultation gratuite 15min",
@@ -104,10 +104,58 @@ const content = {
       subtitle: "Elija el horario que mejor le convenga",
     },
   },
+  en: {
+    hero: {
+      title: "Clinical therapist\nmental health",
+      subtitle: "Therapeutic support with a humanistic and empathetic approach",
+      cta: "Book an appointment",
+      freeCta: "Free consultation 15min",
+    },
+    services: {
+      title: "My Services",
+      subtitle: "Personalized support for every situation",
+      individual: {
+        title: "Individual Therapy",
+        description: "Personal support to overcome difficulties and develop your potential",
+      },
+      couple: {
+        title: "Couples Therapy",
+        description: "Restore communication and strengthen the bond in your relationship",
+      },
+      family: {
+        title: "Family Therapy",
+        description: "Harmonize family relationships and resolve conflicts",
+      },
+      online: {
+        title: "Online Consultations",
+        description: "Therapy from the comfort of your home, with the same quality of care",
+      },
+    },
+    testimonials: {
+      title: "Testimonials",
+      subtitle: "What my clients say",
+      testimonial1: {
+        text: "Jose helped me regain self-confidence. His caring and professional approach helped me overcome my difficulties.",
+        author: "Marie L.",
+      },
+      testimonial2: {
+        text: "Thanks to couples therapy sessions, we were able to save our relationship. Thank you for your listening and valuable advice.",
+        author: "Peter and Sophie",
+      },
+      testimonial3: {
+        text: "Online consultations are very convenient. Jose creates a climate of trust even at a distance.",
+        author: "Anthony M.",
+      },
+    },
+    appointment: {
+      title: "Book your consultation",
+      subtitle: "Choose the time slot that suits you best",
+    },
+  },
 }
 
 export default function HomePage() {
-  const [currentLang, setCurrentLang] = useState<"fr" | "es">("fr")
+  const [currentLang, setCurrentLang] = useState<"fr" | "es" | "en">("fr")
   const t = content[currentLang]
 
   return (

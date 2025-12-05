@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, Globe } from "lucide-react"
 
 interface NavigationProps {
-  currentLang: "fr" | "es"
-  onLanguageChange: (lang: "fr" | "es") => void
+  currentLang: "fr" | "es" | "en"
+  onLanguageChange: (lang: "fr" | "es" | "en") => void
 }
 
 const navItems = {
@@ -29,6 +29,15 @@ const navItems = {
     { href: "/blog", label: "Blog" },
     { href: "/contact", label: "Contacto" },
   ],
+  en: [
+    { href: "/", label: "Home" },
+    { href: "/a-propos", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/tarifs", label: "Pricing" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
+  ],
 }
 
 export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
@@ -39,7 +48,7 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
   useEffect(() => {
     try {
       const stored = typeof window !== 'undefined' ? localStorage.getItem('preferredLang') : null
-      if (stored === 'fr' || stored === 'es') {
+      if (stored === 'fr' || stored === 'es' || stored === 'en') {
         onLanguageChange(stored)
       }
     } catch (_) {
@@ -97,11 +106,22 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
               >
                 ES
               </Button>
+              <Button
+                variant={currentLang === "en" ? "default" : "ghost"}
+                size="sm"
+                onClick={() => {
+                  try { localStorage.setItem('preferredLang', 'en') } catch (_) {}
+                  onLanguageChange("en")
+                }}
+                className="text-xs"
+              >
+                EN
+              </Button>
             </div>
 
             {/* CTA Button */}
             <Button className="bg-primary hover:bg-primary/90 liquid-transition">
-              {currentLang === "fr" ? "Prendre RDV" : "Reservar Cita"}
+              {currentLang === "fr" ? "Prendre RDV" : currentLang === "es" ? "Reservar Cita" : "Book an Appointment"}
             </Button>
           </div>
 
@@ -152,10 +172,21 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
                 >
                   ES
                 </Button>
+                <Button
+                  variant={currentLang === "en" ? "default" : "ghost"}
+                  size="sm"
+                  onClick={() => {
+                    try { localStorage.setItem('preferredLang', 'en') } catch (_) {}
+                    onLanguageChange("en")
+                  }}
+                  className="text-xs"
+                >
+                  EN
+                </Button>
               </div>
 
               <Button className="bg-primary hover:bg-primary/90 liquid-transition">
-                {currentLang === "fr" ? "Prendre RDV" : "Reservar Cita"}
+                {currentLang === "fr" ? "Prendre RDV" : currentLang === "es" ? "Reservar Cita" : "Book an Appointment"}
               </Button>
             </div>
           </div>

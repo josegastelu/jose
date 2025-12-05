@@ -49,9 +49,9 @@ const content = {
     contact: {
       title: "Informations de contact",
       address: {
-        // title: "Adresse du cabinet",
-        // line1: "123 Rue de la Paix",
-        // line2: "75001 Paris, France",
+        title: "Adresse du cabinet",
+        line1: "",
+        line2: "",
       },
       phone: {
         title: "Téléphone",
@@ -141,10 +141,63 @@ const content = {
       button: "Hacer una cita",
     },
   },
+  en: {
+    hero: {
+      title: "Contact",
+      subtitle: "Let’s schedule an appointment to start your well‑being journey",
+    },
+    form: {
+      title: "Send me a message",
+      subtitle: "I’ll get back to you as soon as possible",
+      name: "Full name",
+      email: "Email address",
+      phone: "Phone (optional)",
+      subject: "Subject",
+      message: "Your message",
+      send: "Send message",
+      success: "Message sent successfully!",
+      subjects: [
+        "Free 15‑min consultation",
+        "Individual therapy",
+        "Couples therapy",
+        "Workshops/keynotes",
+        "General question",
+      ],
+    },
+    contact: {
+      title: "Contact information",
+      address: {
+        title: "Office address",
+        line1: "",
+        line2: "",
+      },
+      phone: { title: "Phone", number: "+1 514-618-4390" },
+      email: { title: "Email", address: "contact@jose-gastelu.com" },
+      hours: {
+        title: "Opening hours",
+        monday: "Monday: 9:00 a.m. – 6:00 p.m.",
+        tuesday: "Tuesday: 9:00 a.m. – 6:00 p.m.",
+        wednesday: "Wednesday: 9:00 a.m. – 6:00 p.m.",
+        thursday: "Thursday: 9:00 a.m. – 6:00 p.m.",
+        friday: "Friday: 9:00 a.m. – 5:00 p.m.",
+        weekend: "Weekend: Closed",
+      },
+    },
+    whatsapp: {
+      title: "Quick contact",
+      subtitle: "Message me directly on WhatsApp",
+      button: "Write on WhatsApp",
+    },
+    appointment: {
+      title: "Book an appointment",
+      subtitle: "Free 15‑minute consultation available",
+      button: "Book now",
+    },
+  },
 }
 
 export default function ContactPage() {
-  const [currentLang, setCurrentLang] = useState<"fr" | "es">("fr")
+  const [currentLang, setCurrentLang] = useState<"fr" | "es" | "en">("fr")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -171,7 +224,9 @@ export default function ContactPage() {
   const whatsappMessage = encodeURIComponent(
     currentLang === "fr"
       ? "Bonjour José, je souhaiterais prendre rendez-vous pour une consultation."
-      : "Hola José, me gustaría hacer una cita para una consulta.",
+      : currentLang === "es"
+      ? "Hola José, me gustaría hacer una cita para una consulta."
+      : "Hello José, I’d like to book an appointment for a consultation.",
   )
 
   return (
@@ -411,12 +466,14 @@ export default function ContactPage() {
                     <div className="text-center">
                       <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
                       <p className="text-foreground font-medium">
-                        {currentLang === "fr" ? "Carte interactive" : "Mapa interactivo"}
+                        {currentLang === "fr" ? "Carte interactive" : currentLang === "es" ? "Mapa interactivo" : "Interactive map"}
                       </p>
                       <p className="text-muted-foreground text-sm">
                         {currentLang === "fr"
                           ? "Intégration Google Maps à venir"
-                          : "Integración de Google Maps próximamente"}
+                          : currentLang === "es"
+                          ? "Integración de Google Maps próximamente"
+                          : "Google Maps integration coming soon"}
                       </p>
                     </div>
                   </div>
@@ -433,25 +490,31 @@ export default function ContactPage() {
           <Card className="glass-card border-0 bg-red-50/80">
             <CardContent className="p-8">
               <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
-                {currentLang === "fr" ? "Urgence santé mentale" : "Emergencia de salud mental"}
+                {currentLang === "fr" ? "Urgence santé mentale" : currentLang === "es" ? "Emergencia de salud mental" : "Mental health emergency"}
               </h2>
               <p className="text-muted-foreground mb-6">
                 {currentLang === "fr"
                   ? "Si vous traversez une crise ou avez des pensées suicidaires, contactez immédiatement :"
-                  : "Si atraviesa una crisis o tiene pensamientos suicidas, contacte inmediatamente:"}
+                  : currentLang === "es"
+                  ? "Si atraviesa una crisis o tiene pensamientos suicidas, contacte inmediatamente:"
+                  : "If you are in crisis or having suicidal thoughts, contact immediately:"}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="outline" className="border-red-200 text-red-700 hover:bg-red-50 bg-transparent">
                   <Phone className="w-4 h-4 mr-2" />
                   {currentLang === "fr"
                     ? "Services généraux d’urgence : 911"
-                    : "Servicios generales de emergencia: 911"}
+                    : currentLang === "es"
+                    ? "Servicios generales de emergencia: 911"
+                    : "General emergency services: 911"}
                 </Button>
                 <Button variant="outline" className="border-red-200 text-red-700 hover:bg-red-50 bg-transparent">
                   <Phone className="w-4 h-4 mr-2" />
                   {currentLang === "fr"
                     ? "Centre de crise et de prévention du suicide : 1-866-277-3553"
-                    : "Centro de crisis y prevención del suicidio: 1-866-277-3553"}
+                    : currentLang === "es"
+                    ? "Centro de crisis y prevención del suicidio: 1-866-277-3553"
+                    : "Crisis and suicide prevention center: 1-866-277-3553"}
                 </Button>
               </div>
             </CardContent>

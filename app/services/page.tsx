@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { openSchedulingPopup } from "@/components/googleScheduler"
 import { Heart, Users, Presentation, Video, Clock, Euro, Calendar, CheckCircle, Brain, Target } from "lucide-react"
+import { PRICES, ONLINE_PRICES } from "@/const/price"
 
 const content = {
   fr: {
@@ -18,8 +19,8 @@ const content = {
         title: "Thérapie Individuelle",
         description:
           "Un espace personnel pour explorer vos difficultés, développer votre potentiel et retrouver un équilibre émotionnel.",
-        priceInPerson: "110$",
-        priceVideo: "100$",
+        priceInPerson: PRICES.individual.inPerson,
+        priceVideo: PRICES.individual.video,
         duration: "50 minutes",
         benefits: [
           "Troubles anxieux",
@@ -33,8 +34,8 @@ const content = {
       couple: {
         title: "Thérapie de Couple",
         description: "Restaurer la communication, résoudre les conflits et renforcer votre relation amoureuse.",
-        priceInPerson: "120$",
-        priceVideo: "110$",
+        priceInPerson: PRICES.couple.inPerson,
+        priceVideo: PRICES.couple.video,
         duration: "60 minutes",
         benefits: [
           "Difficultés de couple",
@@ -63,8 +64,8 @@ const content = {
         title: "Consultations en Ligne",
         description:
           "Thérapie accessible depuis chez vous avec la même qualité d'accompagnement qu'en présentiel. Consultation gratuite de 15 minutes disponible.",
-        priceIndividual: "100$",
-        priceCouple: "110$",
+        priceIndividual: ONLINE_PRICES.individual,
+        priceCouple: ONLINE_PRICES.couple,
         duration: "50-60 minutes",
         benefits: [
           "Confort de votre domicile",
@@ -140,8 +141,8 @@ const content = {
         title: "Terapia Individual",
         description:
           "Un espacio personal para explorar sus dificultades, desarrollar su potencial y recuperar el equilibrio emocional.",
-        priceInPerson: "110$",
-        priceVideo: "100$",
+        priceInPerson: PRICES.individual.inPerson,
+        priceVideo: PRICES.individual.video,
         duration: "50 minutos",
         benefits: [
           "Trastornos de ansiedad",
@@ -155,8 +156,8 @@ const content = {
       couple: {
         title: "Terapia de Pareja",
         description: "Restaurar la comunicación, resolver conflictos y fortalecer su relación amorosa.",
-        priceInPerson: "120$",
-        priceVideo: "110$",
+        priceInPerson: PRICES.couple.inPerson,
+        priceVideo: PRICES.couple.video,
         duration: "60 minutos",
         benefits: [
           "Dificultades de pareja",
@@ -185,8 +186,8 @@ const content = {
         title: "Consultas en Línea",
         description:
           "Terapia accesible desde su hogar con la misma calidad de acompañamiento que en persona. Consulta gratuita de 15 minutos disponible.",
-        priceIndividual: "100$",
-        priceCouple: "110$",
+        priceIndividual: ONLINE_PRICES.individual,
+        priceCouple: ONLINE_PRICES.couple,
         duration: "50-60 minutos",
         benefits: [
           "Comodidad de su hogar",
@@ -252,10 +253,120 @@ const content = {
       button: "Reservar ahora",
     },
   },
+  en: {
+    hero: {
+      title: "My Services",
+      subtitle: "Therapeutic support tailored to your needs",
+    },
+    services: {
+      individual: {
+        title: "Individual Therapy",
+        description:
+          "A personal space to explore your difficulties, develop your potential, and regain emotional balance.",
+        priceInPerson: PRICES.individual.inPerson,
+        priceVideo: PRICES.individual.video,
+        duration: "50 minutes",
+        benefits: [
+          "Anxiety disorders",
+          "Depression",
+          "Self‑esteem",
+          "Grief",
+          "Work/academic burnout",
+          "Life transition",
+        ],
+      },
+      couple: {
+        title: "Couples Therapy",
+        description: "Restore communication, resolve conflicts, and strengthen your relationship.",
+        priceInPerson: PRICES.couple.inPerson,
+        priceVideo: PRICES.couple.video,
+        duration: "60 minutes",
+        benefits: [
+          "Couple difficulties",
+          "Relationship challenges",
+          "Communication improvement",
+          "Conflict resolution",
+          "Rebuilding trust",
+          "Strengthening the bond",
+        ],
+      },
+      training: {
+        title: "Workshops/Keynotes",
+        description: "Training and talks for organizations and companies on mental health and well‑being.",
+        price: "On quote",
+        duration: "Variable",
+        benefits: [
+          "Burnout prevention",
+          "Workplace stress management",
+          "Mental‑health awareness",
+          "Team training",
+          "Tailored keynotes",
+          "Organizational support",
+        ],
+      },
+      online: {
+        title: "Online Consultations",
+        description:
+          "Therapy from home with the same quality of care as in person. Free 15‑minute consultation available.",
+        priceIndividual: ONLINE_PRICES.individual,
+        priceCouple: ONLINE_PRICES.couple,
+        duration: "50–60 minutes",
+        benefits: [
+          "Comfort of your home",
+          "Flexible scheduling",
+          "No commute",
+          "Enhanced confidentiality",
+          "Free 15‑min consultation",
+          "Secure platform",
+        ],
+      },
+    },
+    specialties: {
+      title: "My treatment specialties",
+      subtitle: "Areas of expertise and therapeutic approaches",
+      areas: [
+        "Anxiety disorders",
+        "Depression",
+        "Addictions",
+        "Suicidal ideation/crisis",
+        "Self‑esteem",
+        "Grief",
+        "Couple difficulties",
+        "Relationship challenges",
+        "Work/academic burnout",
+        "Life transition",
+      ],
+      clientele: {
+        title: "Target clientele",
+        groups: ["Teens", "Adults", "Couples", "Organizations / companies"],
+      },
+      approach: {
+        title: "My therapeutic approach",
+        description:
+          "My approach is first and foremost humanistic. It is based on a global understanding of the person and their environment. I ground my practice in the here‑and‑now to co‑create solutions in a climate of trust, while respecting each person’s pace. Empathy, open‑mindedness and kindness guide my professional practice.",
+        methods:
+          "In therapy, I integrate different approaches depending on the person’s needs: cognitive‑behavioural (CBT), humanistic.",
+      },
+    },
+    process: {
+      title: "What does a session look like?",
+      steps: [
+        { title: "First contact", description: "Free 15‑minute consultation to get to know each other and define your needs" },
+        { title: "Assessment", description: "First session to understand your situation and establish a therapeutic plan" },
+        { title: "Support", description: "Regular sessions adapted to your pace and personal goals" },
+        { title: "Progress", description: "Monitoring your progress and adjusting the approach to your needs" },
+      ],
+    },
+    cta: {
+      title: "Start your journey today",
+      description: "Book your free 15‑minute consultation",
+      button: "Book now",
+    },
+  },
 }
 
 export default function ServicesPage() {
-  const [currentLang, setCurrentLang] = useState<"fr" | "es">("fr")
+  const [currentLang, setCurrentLang] = useState<"fr" | "es" | "en">("fr")
   const t = content[currentLang]
 
   return (
