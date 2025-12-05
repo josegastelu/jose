@@ -500,21 +500,25 @@ export default function ContactPage() {
                   : "If you are in crisis or having suicidal thoughts, contact immediately:"}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-red-600 text-white hover:bg-red-700 liquid-transition">
-                  <Phone className="w-4 h-4 mr-2" />
-                  {currentLang === "fr"
-                    ? "Services généraux d’urgence : 911"
-                    : currentLang === "es"
-                    ? "Servicios generales de emergencia: 911"
-                    : "General emergency services: 911"}
+                <Button asChild className="bg-red-600 text-white hover:bg-red-700 liquid-transition">
+                  <a href="tel:911">
+                    <Phone className="w-4 h-4 mr-2" />
+                    {currentLang === "fr"
+                      ? "Services généraux d’urgence : 911"
+                      : currentLang === "es"
+                      ? "Servicios generales de emergencia: 911"
+                      : "General emergency services: 911"}
+                  </a>
                 </Button>
-                <Button className="bg-red-600 text-white hover:bg-red-700 liquid-transition">
-                  <Phone className="w-4 h-4 mr-2" />
-                  {currentLang === "fr"
-                    ? "Centre de crise et de prévention du suicide : 1-866-277-3553"
-                    : currentLang === "es"
-                    ? "Centro de crisis y prevención del suicidio: 1-866-277-3553"
-                    : "Crisis and suicide prevention center: 1-866-277-3553"}
+                <Button asChild className="bg-red-600 text-white hover:bg-red-700 liquid-transition">
+                  <a href="tel:+18662773553">
+                    <Phone className="w-4 h-4 mr-2" />
+                    {currentLang === "fr"
+                      ? "Centre de crise et de prévention du suicide : 1-866-277-3553"
+                      : currentLang === "es"
+                      ? "Centro de crisis y prevención del suicidio: 1-866-277-3553"
+                      : "Crisis and suicide prevention center: 1-866-277-3553"}
+                  </a>
                 </Button>
               </div>
             </CardContent>
