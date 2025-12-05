@@ -14,6 +14,14 @@ const content = {
       title: "Mes Services",
       subtitle: "Un accompagnement thérapeutique adapté à vos besoins",
     },
+    sessionTypes: {
+      inPerson: "Présentiel",
+      video: "Vidéoconférence",
+    },
+    labels: {
+      individual: "Individuel",
+      couple: "Couple",
+    },
     services: {
       individual: {
         title: "Thérapie Individuelle",
@@ -136,6 +144,14 @@ const content = {
       title: "Mis Servicios",
       subtitle: "Un acompañamiento terapéutico adaptado a sus necesidades",
     },
+    sessionTypes: {
+      inPerson: "Presencial",
+      video: "Videoconferencia",
+    },
+    labels: {
+      individual: "Individual",
+      couple: "Pareja",
+    },
     services: {
       individual: {
         title: "Terapia Individual",
@@ -171,7 +187,7 @@ const content = {
       training: {
         title: "Formaciones/Conferencias",
         description: "Formaciones y conferencias para organismos y empresas sobre salud mental y bienestar.",
-        price: "Bajo presupuesto",
+        price: "Según presupuesto",
         duration: "Variable",
         benefits: [
           "Prevención del agotamiento profesional",
@@ -257,6 +273,14 @@ const content = {
     hero: {
       title: "My Services",
       subtitle: "Therapeutic support tailored to your needs",
+    },
+    sessionTypes: {
+      inPerson: "In person",
+      video: "Videoconference",
+    },
+    labels: {
+      individual: "Individual",
+      couple: "Couple",
     },
     services: {
       individual: {
@@ -424,11 +448,11 @@ export default function ServicesPage() {
 
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Presencial:</span>
+                    <span className="text-muted-foreground">{t.sessionTypes.inPerson}:</span>
                     <span className="font-semibold text-primary">{t.services.individual.priceInPerson}</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Videollamada:</span>
+                    <span className="text-muted-foreground">{t.sessionTypes.video}:</span>
                     <span className="font-semibold text-secondary">{t.services.individual.priceVideo}</span>
                   </div>
                 </div>
@@ -472,11 +496,11 @@ export default function ServicesPage() {
 
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Presencial:</span>
+                    <span className="text-muted-foreground">{t.sessionTypes.inPerson}:</span>
                     <span className="font-semibold text-primary">{t.services.couple.priceInPerson}</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Videollamada:</span>
+                    <span className="text-muted-foreground">{t.sessionTypes.video}:</span>
                     <span className="font-semibold text-secondary">{t.services.couple.priceVideo}</span>
                   </div>
                 </div>
@@ -561,11 +585,11 @@ export default function ServicesPage() {
 
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Individual:</span>
+                    <span className="text-muted-foreground">{t.labels.individual}:</span>
                     <span className="font-semibold text-primary">{t.services.online.priceIndividual}</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Couple:</span>
+                    <span className="text-muted-foreground">{t.labels.couple}:</span>
                     <span className="font-semibold text-secondary">{t.services.online.priceCouple}</span>
                   </div>
                 </div>

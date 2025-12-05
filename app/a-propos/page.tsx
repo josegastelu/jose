@@ -78,65 +78,46 @@ const content = {
   es: {
     hero: {
       title: "Acerca de Jose Gastelu",
-      subtitle: "Psicólogo clínico con un enfoque humanista y empático",
+      subtitle: "Terapeuta clínico miembro de la OTSTCFQ, formado en la relación terapéutica",
     },
     intro:
-      "Soy terapeuta clínico, miembro de la OTSTCFQ. Mi formación se centra en la relación terapéutica. Actualmente profundizo mis conocimientos en la Facultad de Medicina y Ciencias de la Salud de la Universidad de Sherbrooke, en la maestría clínica en dependencias. Mis trabajos abordan una investigación de tipo ensayo‑síntesis, explorando los vínculos entre las dependencias y la resiliencia como factor de protección.",
+      "Soy terapeuta clínico, miembro de la OTSTCFQ. Mi formación está centrada en la relación terapéutica. Actualmente profundizo mis conocimientos en la Facultad de Medicina y Ciencias de la Salud de la Universidad de Sherbrooke, en el marco de la maestría clínica en dependencias. Mis trabajos abordan una investigación de tipo ensayo‑síntesis, explorando los vínculos entre las dependencias y la resiliencia como factor de protección.",
     philosophy: {
       title: "Mi Filosofía",
-      subtitle: "Un enfoque centrado en la persona",
+      subtitle: "Mi enfoque es ante todo humanista.",
       description:
-        "Creo profundamente en la capacidad de cada individuo para encontrar sus propias soluciones y desarrollar su potencial. Mi enfoque humanista coloca a la persona en el centro del proceso terapéutico, en un clima de confianza, empatía y autenticidad.",
+        "Se basa en una comprensión global de la persona y del entorno en el que evoluciona. Anclo mi práctica en el «aquí y ahora» para co‑construir vías de solución en un clima de confianza, respetando siempre el ritmo de cada persona. La empatía, la apertura de mente y la benevolencia son los valores que guían mi práctica profesional. En la intervención terapéutica, integro distintos enfoques según las necesidades de la persona: cognitivo‑conductual (TCC), humanista.",
       values: [
-        {
-          title: "Empatía",
-          description: "Comprender y sentir lo que vives sin juicio",
-        },
-        {
-          title: "Benevolencia",
-          description: "Crear un espacio seguro para tu crecimiento",
-        },
-        {
-          title: "Autenticidad",
-          description: "Ser verdadero y transparente en nuestra relación terapéutica",
-        },
-        {
-          title: "Respeto",
-          description: "Honrar tu ritmo y tus decisiones personales",
-        },
+        { title: "Empatía", description: "Escuchar tu experiencia sin juicio" },
+        { title: "Apertura de mente", description: "Acoger tu singularidad y tu contexto" },
+        { title: "Benevolencia", description: "Ofrecer un espacio seguro y respetuoso" },
+        { title: "Respeto del ritmo", description: "Avanzar a tu cadencia, en co‑construcción" },
       ],
     },
     qualifications: {
-      title: "Cualificaciones y Formación",
+      title: "Cualificaciones y recorrido",
       items: [
-        "Máster en Psicología Clínica - Universidad de Madrid",
-        "Especialización en Terapia Humanista",
-        "Formación en Terapia de Pareja y Familiar",
-        "Certificación en Terapia en Línea",
-        "15 años de experiencia en práctica clínica",
-        "Miembro del Colegio de Psicólogos",
+        "Maestría en dependencias – En curso – UdeS.",
+        "BTS. Clínica – UQAT.",
+        "B.Sc. Mult. Perfil intervención – UdeM.",
+        "Intervención Psicosocial – UQÀM.",
+        "Formaciones:",
+        "Curso de prevención del suicidio – Salud Mental.",
+        "Terapia cognitivo‑conductual (TCC) – Salud Mental.",
+        "Parejas, relaciones y trastornos de ansiedad.",
+        "Terapia conyugal en acción.",
       ],
     },
     approach: {
       title: "Mi Enfoque Terapéutico",
-      description: "Mi método se basa en varios enfoques complementarios, adaptados a sus necesidades específicas:",
+      description:
+        "Integro diferentes enfoques según sus necesidades, siempre desde una perspectiva humanista y colaborativa:",
       methods: [
-        {
-          title: "Enfoque Humanista",
-          description: "Centrado en su potencial de crecimiento y auto-actualización",
-        },
-        {
-          title: "Terapia Cognitivo-Conductual",
-          description: "Para identificar y modificar los patrones de pensamiento limitantes",
-        },
-        {
-          title: "Terapia Sistémica",
-          description: "Para comprender las dinámicas relacionales y familiares",
-        },
-        {
-          title: "Mindfulness",
-          description: "Para desarrollar la conciencia de sí mismo y la gestión emocional",
-        },
+        { title: "Humanista", description: "Comprensión global y centrada en la persona" },
+        { title: "Cognitivo‑conductual (TCC)", description: "Alinear pensamientos y comportamientos con sus objetivos" },
+        { title: "Motivacional", description: "Acompañar el cambio a su ritmo" },
+        { title: "Sistémico", description: "Considerar las dinámicas relacionales" },
+        { title: "Mindfulness", description: "Desarrollar la atención plena y la regulación emocional" },
       ],
     },
     cta: {
@@ -145,11 +126,11 @@ const content = {
       button: "Reservar una consulta",
     },
     practice: {
-      title: "Mi práctica",
+      title: "Mi Práctica",
       intro:
-        "Ofrezco servicios de consulta terapéutica en seguimientos individuales y de pareja, a una clientela de jóvenes adultos y adultos, en presencial o videoconferencia en Montreal.",
+        "Ofrezco servicios de consulta terapéutica en seguimientos individuales y de pareja, para una clientela de jóvenes adultos y adultos, de forma presencial o por videoconferencia en Montreal.",
       collaborations:
-        "Actualmente, mi práctica clínica se desarrolla en colaboración con la Clinique Duluth, GreenShield Santé y Health Canada.",
+        "Actualmente, mi práctica clínica se despliega en colaboración con la Clinique Duluth, GreenShield Santé y Health Canada.",
       location: "Mi consultorio está ubicado en el Plateau Mont‑Royal.",
     },
     emergency: {

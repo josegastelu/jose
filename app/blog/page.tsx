@@ -374,15 +374,21 @@ export default function BlogPage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-card rounded-xl p-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-              {currentLang === "fr" ? "Restez informé" : "Manténgase informado"}
+              {currentLang === "fr" ? "Restez informé" : currentLang === "es" ? "Manténgase informado" : "Stay informed"}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               {currentLang === "fr"
                 ? "Recevez nos derniers articles et conseils directement dans votre boîte mail"
-                : "Reciba nuestros últimos artículos y consejos directamente en su correo"}
+                : currentLang === "es"
+                ? "Reciba nuestros últimos artículos y consejos directamente en su correo"
+                : "Get our latest articles and tips straight to your inbox"}
             </p>
             <Button size="lg" className="bg-primary hover:bg-primary/90 liquid-transition text-lg px-8 py-3">
-              {currentLang === "fr" ? "S'abonner à la newsletter" : "Suscribirse al boletín"}
+              {currentLang === "fr"
+                ? "S'abonner à la newsletter"
+                : currentLang === "es"
+                ? "Suscribirse al boletín"
+                : "Subscribe to the newsletter"}
             </Button>
           </div>
         </div>

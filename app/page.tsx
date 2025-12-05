@@ -95,7 +95,7 @@ const content = {
         author: "Pedro y Sofía",
       },
       testimonial3: {
-        text: "Las consultas en línea son muy práctiques. Jose sabe crear un clima de confianza incluso a distancia.",
+          text: "Las consultas en línea son muy prácticas. Jose sabe crear un clima de confianza incluso a distancia.",
         author: "Antonio M.",
       },
     },
@@ -273,12 +273,18 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-card rounded-xl p-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-              {currentLang === "fr" ? "Prêt à commencer votre parcours ?" : "¿Listo para comenzar su camino?"}
+              {currentLang === "fr"
+                ? "Prêt à commencer votre parcours ?"
+                : currentLang === "es"
+                ? "¿Listo para comenzar su camino?"
+                : "Ready to start your journey?"}
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               {currentLang === "fr"
                 ? "Prenez le premier pas vers un mieux-être. Réservez votre consultation gratuite de 15 minutes."
-                : "Dé el primer paso hacia el bienestar. Reserve su consulta gratuita de 15 minutos."}
+                : currentLang === "es"
+                ? "Dé el primer paso hacia el bienestar. Reserve su consulta gratuita de 15 minutos."
+                : "Take the first step toward well-being. Book your free 15‑minute consultation."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-primary hover:bg-primary/90 liquid-transition text-lg px-8 py-3" onClick={() => openFreeSchedulingPopup()}>

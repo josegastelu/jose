@@ -109,8 +109,8 @@ const content = {
       title: "Información de contacto",
       address: {
         title: "Dirección del consultorio",
-        line1: "123 Rue de la Paix",
-        line2: "75001 París, Francia",
+        line1: "",
+        line2: "",
       },
       phone: {
         title: "Teléfono",
@@ -500,7 +500,7 @@ export default function ContactPage() {
                   : "If you are in crisis or having suicidal thoughts, contact immediately:"}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="outline" className="border-red-200 text-red-700 hover:bg-red-50 bg-transparent">
+                <Button className="bg-red-600 text-white hover:bg-red-700 liquid-transition">
                   <Phone className="w-4 h-4 mr-2" />
                   {currentLang === "fr"
                     ? "Services généraux d’urgence : 911"
@@ -508,7 +508,7 @@ export default function ContactPage() {
                     ? "Servicios generales de emergencia: 911"
                     : "General emergency services: 911"}
                 </Button>
-                <Button variant="outline" className="border-red-200 text-red-700 hover:bg-red-50 bg-transparent">
+                <Button className="bg-red-600 text-white hover:bg-red-700 liquid-transition">
                   <Phone className="w-4 h-4 mr-2" />
                   {currentLang === "fr"
                     ? "Centre de crise et de prévention du suicide : 1-866-277-3553"
