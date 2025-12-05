@@ -80,7 +80,7 @@ const content = {
     insurance: {
       title: "Remboursement",
       description:
-        " certaines  assurances remboursent les consultations thérapeutiques. N’hésitez par à vous renseigner auprès de votre assurance d’emploi.",
+        " Certaines  assurances remboursent les consultations thérapeutiques. N’hésitez par à vous renseigner auprès de votre assurance d’emploi.",
     },
     cta: {
       title: "Prêt à commencer ?",

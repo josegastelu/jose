@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Navigation } from "@/components/navigation"
+import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
@@ -246,9 +247,11 @@ export default function FAQPage() {
           <div className="glass-card rounded-xl p-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">{t.cta.title}</h2>
             <p className="text-lg text-muted-foreground mb-8">{t.cta.description}</p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 liquid-transition text-lg px-8 py-3">
-              <Calendar className="w-5 h-5 mr-2" />
-              {t.cta.button}
+            <Button size="lg" className="bg-primary hover:bg-primary/90 liquid-transition text-lg px-8 py-3" asChild>
+              <Link href="/contact">
+                <Calendar className="w-5 h-5 mr-2" />
+                {t.cta.button}
+              </Link>
             </Button>
           </div>
         </div>

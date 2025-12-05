@@ -1,14 +1,18 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { SCHEDULE_URL } from "@/components/googleScheduler"
+import { CLASSIC_SCHEDULE_URL } from "@/components/googleScheduler"
 
 export default function SchedulingModal() {
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [scheduleUrl, setScheduleUrl] = useState(CLASSIC_SCHEDULE_URL)
 
   useEffect(() => {
-    const handler = () => {
+    const handler = (e: Event) => {
+      const custom = e as CustomEvent<{ url?: string }>
+      const nextUrl = custom.detail?.url ?? CLASSIC_SCHEDULE_URL
+      setScheduleUrl(nextUrl)
       setLoading(true)
       setOpen(true)
     }
@@ -36,7 +40,7 @@ export default function SchedulingModal() {
             </div>
           </div>
         )}
-        <iframe src={SCHEDULE_URL} className="w-full h-full" onLoad={() => setLoading(false)} />
+        <iframe src={scheduleUrl} className="w-full h-full" onLoad={() => setLoading(false)} />
       </div>
     </div>
   )

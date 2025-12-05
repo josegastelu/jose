@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Navigation } from "@/components/navigation"
-import { openSchedulingPopup } from "@/components/googleScheduler"
+import { openFreeSchedulingPopup, openClassicSchedulingPopup } from "@/components/googleScheduler"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, Heart, Users, Video } from "lucide-react"
@@ -186,7 +186,11 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 liquid-transition text-lg px-8 py-3">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 liquid-transition text-lg px-8 py-3"
+              onClick={() => openClassicSchedulingPopup()}
+            >
               <Calendar className="w-5 h-5 mr-2" />
               {t.hero.cta}
             </Button>
@@ -194,7 +198,7 @@ export default function HomePage() {
               variant="outline"
               size="lg"
               className="glass-card liquid-transition text-lg px-8 py-3 bg-transparent"
-              onClick={() => openSchedulingPopup()}
+              onClick={() => openFreeSchedulingPopup()}
             >
               <Video className="w-5 h-5 mr-2" />
               {t.hero.freeCta}
@@ -246,9 +250,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Google Calendar Integration Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className=" px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">{t.appointment.title}</h2>
@@ -278,7 +281,7 @@ export default function HomePage() {
                 : "Dé el primer paso hacia el bienestar. Reserve su consulta gratuita de 15 minutos."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 liquid-transition text-lg px-8 py-3" onClick={() => openSchedulingPopup()}>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 liquid-transition text-lg px-8 py-3" onClick={() => openFreeSchedulingPopup()}>
                 <Calendar className="w-5 h-5 mr-2" />
                 {t.hero.freeCta}
               </Button>

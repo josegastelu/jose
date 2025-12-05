@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Globe } from "lucide-react"
+import { openClassicSchedulingPopup } from "@/components/googleScheduler"
 
 interface NavigationProps {
   currentLang: "fr" | "es" | "en"
@@ -120,7 +121,10 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
             </div>
 
             {/* CTA Button */}
-            <Button className="bg-primary hover:bg-primary/90 liquid-transition">
+            <Button
+              className="bg-primary hover:bg-primary/90 liquid-transition"
+              onClick={() => openClassicSchedulingPopup()}
+            >
               {currentLang === "fr" ? "Prendre RDV" : currentLang === "es" ? "Reservar Cita" : "Book an Appointment"}
             </Button>
           </div>
@@ -185,7 +189,13 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
                 </Button>
               </div>
 
-              <Button className="bg-primary hover:bg-primary/90 liquid-transition">
+              <Button
+                className="bg-primary hover:bg-primary/90 liquid-transition"
+                onClick={() => {
+                  setIsOpen(false)
+                  openClassicSchedulingPopup()
+                }}
+              >
                 {currentLang === "fr" ? "Prendre RDV" : currentLang === "es" ? "Reservar Cita" : "Book an Appointment"}
               </Button>
             </div>
