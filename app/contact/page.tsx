@@ -50,7 +50,7 @@ const content = {
       title: "Informations de contact",
       address: {
         title: "Adresse du cabinet",
-        line1: "",
+        line1: "Clinique Duluth ( 518 avenue Duluth E. Montréal )",
         line2: "",
       },
       phone: {
@@ -109,7 +109,7 @@ const content = {
       title: "Información de contacto",
       address: {
         title: "Dirección del consultorio",
-        line1: "",
+        line1: "Clinique Duluth ( 518 avenue Duluth E. Montréal )",
         line2: "",
       },
       phone: {
@@ -168,7 +168,7 @@ const content = {
       title: "Contact information",
       address: {
         title: "Office address",
-        line1: "",
+        line1: "Clinique Duluth ( 518 avenue Duluth E. Montréal )",
         line2: "",
       },
       phone: { title: "Phone", number: "+1 514-618-4390" },
