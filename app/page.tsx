@@ -260,7 +260,7 @@ export default function HomePage() {
 
           <div className="glass-card rounded-xl p-8">
     
-<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2JSblHLarI-8265xED0s68ramEfpt5PA7ShCL1II3He3GwpfhM8Fl5aS4Ro6C-9gT4txLJjeCl?gv=true" width="100%" height="600" ></iframe>
+<iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1Kc6FGAeDSPXtHeGNCt_y92OCt43pUkOFpnRQGnthPHFJnfkcdEsWsW0xDx8X1acSHGSvpG-m2?gv=true" width="100%" height="600" ></iframe>
 
           </div>
         </div>
