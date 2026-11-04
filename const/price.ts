@@ -1,15 +1,15 @@
 export const PRICES = {
   individual: {
-    inPerson: "120$",
-    video: "110$",
-  },
-  couple: {
     inPerson: "130$",
     video: "120$",
   },
+  couple: {
+    inPerson: "140$",
+    video: "130$",
+  },
   student: {
-    inPerson: "100$",
-    video: "90$",
+    inPerson: "110$",
+    video: "100$",
   },
 }
 
